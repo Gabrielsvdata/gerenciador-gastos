@@ -1,0 +1,145 @@
+/* --- Paleta base, alinhada ao Dashboard --- */
+$green-500: #22c55e;
+$green-600: #16a34a;
+$bg-gray: #f5f6fa;
+$text-dark: #111;
+$text-muted: #475569;
+$radius: 10px;
+
+/* Layout principal */
+.login-page {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  min-height: 100vh;
+  background: $bg-gray;
+
+  @media (max-width: 920px) {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+}
+
+/* --- Hero (lado esquerdo) --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem clamp(2rem, 5vw, 6rem);
+  background: linear-gradient(132deg, $green-500 0%, $green-600 100%);
+  color: #fff;
+
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    max-width: 40ch;
+    margin-bottom: 2.5rem;
+    color: rgba(#fff, 0.9);
+  }
+
+  figure {
+    max-width: 420px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  @media (max-width: 920px) {
+    order: 2;
+    align-items: center;
+    text-align: center;
+
+    figure {
+      margin-top: 2rem;
+    }
+  }
+}
+
+/* --- Card de login (lado direito) --- */
+.login-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  box-shadow: 0 6px 24px rgba(#000, 0.07);
+  border-radius: $radius;
+
+  @media (max-width: 920px) {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    label {
+      font-weight: 600;
+      color: $text-muted;
+      font-size: 0.95rem;
+    }
+
+    input {
+      padding: 0.9rem 1.15rem;
+      font-size: 1.05rem;
+      border: 2px solid #d1d5db;
+      border-radius: $radius;
+      transition: border-color 0.25s, box-shadow 0.25s;
+
+      &::placeholder {
+        color: #9ca3af;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $green-500;
+        box-shadow: 0 0 0 3px rgba($green-500, 0.2);
+      }
+    }
+
+    .btn-primary {
+      background: $green-500;
+      color: #fff;
+      border: none;
+      padding: 0.9rem 1.25rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: $radius;
+      cursor: pointer;
+      transition: background 0.25s;
+
+      &:hover:not(:disabled) {
+        background: $green-600;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+}

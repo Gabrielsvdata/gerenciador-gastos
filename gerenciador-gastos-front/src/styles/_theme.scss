@@ -1,0 +1,33 @@
+:root {
+  --bg: #f5f6fa;
+  --text: #1e1e1e;
+  --card: #ffffff;
+  --border: #dcdfe6;
+  --input-bg: #ffffff;
+  --input-text: #1e1e1e;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: var(--button);
+  color: var(--button-text);
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  transition: filter 0.25s ease, background 0.25s ease;
+  // 👇 Usamos filtro brightness para simular darken sem quebrar Sass
+  &:hover { filter: brightness(0.92); }
+}
+
+[data-theme="dark"] {
+  --bg: #181818;
+  --text: #eeeeee;
+  --card: #242424;
+  --border: #444;
+  --input-bg: #2f2f2f;
+  --input-text: #fafafa;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --button: #22c55e;  /* mantém verde acessível */
+  --button-text: #ffffff;
+}
+}

@@ -1,0 +1,4 @@
+@use "../styles/_variables.scss" as *;
+.card { background:#fff;padding:1.5rem;border-radius:$radius;box-shadow:$shadow; }
+.pos  { color:$green;font-weight:600; }
+.neg  { color:$red;font-weight:600; }

@@ -1,0 +1,44 @@
+@use "../styles/_variables.scss" as *;
+
+.tableContainer {
+  background: white;
+  padding: 1.5rem;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+
+  th, td {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  th {
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  td {
+    color: #334155;
+  }
+}
+
+.entrada {
+  td {
+    color: $green;
+    font-weight: 500;
+  }
+}
+
+.saida {
+  td {
+    color: $red;
+    font-weight: 500;
+  }
+}

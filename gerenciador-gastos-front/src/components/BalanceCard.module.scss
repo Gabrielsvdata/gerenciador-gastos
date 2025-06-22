@@ -1,0 +1,5 @@
+// BalanceCard.module.scss
+@use "../styles/_variables.scss" as *;
+.card{background:white;padding:1.5rem;border-radius:$radius;box-shadow:$shadow;text-align:center;h2{margin-bottom:.5rem;}}
+.pos{color:$green;font-weight:700;font-size:1.8rem;}
+.neg{color:$red;font-weight:700;font-size:1.8rem;}

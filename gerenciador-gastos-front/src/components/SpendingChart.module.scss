@@ -1,0 +1,12 @@
+@use "../styles/_variables.scss" as *;
+
+.chart {
+  margin: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}

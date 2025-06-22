@@ -1,0 +1,14 @@
+@use "../styles/_variables.scss" as *;
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  text-align: center;
+}
+
+.vazio {
+  color: #999;
+  font-style: italic;
+}

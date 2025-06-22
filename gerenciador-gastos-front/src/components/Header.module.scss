@@ -1,0 +1,33 @@
+@use "../styles/_variables.scss" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card);
+  color: var(--text);
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    padding: 0.45rem 0.9rem;
+    background: $red;
+    color: #fff;
+    border: none;
+    border-radius: $radius;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+
+    &:hover {
+      background: darken($red, 10%);
+    }
+  }
+}
