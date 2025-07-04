@@ -1,0 +1,6 @@
+URL_DATABASE_DEV="mysql+pymysql://root:0602@localhost:3306/gerenciador_gastos"
+
+IA_API_KEY=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
+
+
+
